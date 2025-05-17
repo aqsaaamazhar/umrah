@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umrah</title>
+</head>
+<body>
+<div class="main">
+
+        <div class="header">
+            <img src="logo.png" alt="Description of image">
+            <nav>
+                <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Madarasa</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Zakat</a></li>
+                <li><a href="#">Donate</a></li>
+                <li><a href="#">Funding</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About Us</a></li>
+                </ul>
+            </nav>
+            <button class="btn" id="donateBtn">Donate Now</button>
+
+                 <!-- donation  -->
+
+                 <!-- Modal -->
+                        
+                        <div id="paymentModal" class="modal">
+                            <div class="modal-content">
+                                <span class="close-btn" onclick="closeModal()">&times;</span>
+                                <h2>Donate via Mobile Payment</h2>
+                                      <span> Your donation helps feed 1 child for a day. Thank you! 😊</span><br><br>
+
+
+                                <div class="form-group">
+                                <label for="method">Payment Method</label>
+                                <select id="method">
+                                    <option value="JazzCash">JazzCash</option>
+                                    <option value="Easypaisa">Easypaisa</option>
+                                </select>
+                                </div>
+
+                                <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" placeholder="Enter your name">
+                                </div>
+
+                                <div class="form-group">
+                                <label for="phone">Your Mobile Number</label>
+                                <input type="text" id="phone" placeholder="03XXXXXXXXX">
+                                </div>
+
+                                
+
+                                <div class="form-group">
+                                <label for="amount">Amount</label>
+                                <input type="number" id="amount" placeholder="Enter amount">
+                                </div>
+
+                                <div class="form-group">
+                                <label for="date">Payment Date</label>
+                                <input type="date" id="date">
+                                </div>
+                                    <br>
+                                <button class="submit-btn" onclick="submitForm()">Submit Donation</button>
+                            </div>
+                        </div>
+
+
+
+
+        </div>
+    
+
+
+    <!-- section banner -->
+    <div class="banner">
+        <div class="left-banner">
+            <h2 class="Win">Win a Free</h1>
+            <h2 class="Umrah">Umrah!</h2>
+               <p class="Signup">Sign up now for a chance to perform Umrah winner <br>
+                to be announced on right after Eid Khutbah on</p>
+                <p class="eid">Eid ul Adha 2025!</p>
+                <!-- <button class="btn-Raffle" onclick="document.getElementById('demo').innerHTML = Date()">Click to check current date</button>
+                <p id="demo" style="color: white;"></p>
+           -->
+                <button class="btn-Raffle" onclick="openCalendar()">Open Calendar 🗓</button>
+
+                <!-- js  -->
+               
+                <!-- Popup Modal -->
+                <div id="calendarModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeCalendar()">&times;</span>
+                        <div id="calendar"></div>
+                    </div>
+                </div>
+        </div>
+
+        <div class="right-banner">
+            <img src="kabah.png" alt="Description of image" id="kabahImage">
+            
+        </div>
+    </div>
+
+
+
+<!-- section 2 -->
+        <div class ="Free-Umrah">
+            <div class ="clipboard">
+                <img src="Rectangle.png" alt="Description of image">
+
+                <img src="clipboard.png" class="clipboardimg" alt="Description of image">
+
+            </div>
+            <div class ="freeumrah-section ">
+                <p class ="Why-This">Why This</p>
+                <h2 class="Umrah-free">Free Umrah</h2>
+                <p class="freeumrah_para">On Eid ul Adha 2025, we’ll be holding a special Opportunity giving you the chance to win a free Umrah trip.
+
+                    Alhamdulliah an amazing individual from our community has donated an umrah. What better way to give it out than on Eid right after the Eid Khutbah.</p>
+                    
+                    <!-- js -->
+                    <button class="btn-Join " id="openFormBtn">Register Yourself for free Umrah 💖</button>
+                    <div id="formContainer"></div>
+                            <!-- Modal -->
+                <div id="umrahModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" id="closeModalBtn">&times;</span>
+                        <h2 class="Umrah-Reg">Umrah Form</h2>
+                        <form id="umrahForm">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Full Name" /><br>
+
+
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Email Address" required /><br>
+
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Phone Number" /><br>
+
+                        <label for="departureDate">Preferred Departure Date</label>
+                        <input type="date" id="departureDate" name="departureDate" required /><br>
+
+                        <label for="package">Select Package</label>
+                        <select id="package" name="package" required><br>
+                            <option value="">-- Select --</option>
+                            <option value="standard">Standard Package</option>
+                            <option value="premium">Premium Package</option>
+                            <option value="vip">VIP Package</option>
+                        </select>
+                        <br>
+
+                       
+
+                        <input type="submit" value="Submit" class="btn-submit "/>
+                        </form>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+
+            
+
+            
+        </div>
+
+
+
+
+
+    <!-- section 3 -->
+
+    <div class="Works">
+        <h3 class="howworks">How It Works</h3>
+    
+        <div class="four-container">
+            <div class="container-1">
+                <img src="1.png" alt="Description of image">
+                <p>Steps to Win a <br>Free Umrah</p>
+            </div>
+            <div class="container-2"> 
+                <img src="icon1.png"  alt="Description of image">
+                <img src="01.png" class ="second_img" alt="Description of image">
+               
+                <p>Fill out the entry <br>form</p>
+
+            </div>
+            <div class="container-3">
+                <img src="icon2.png"  alt="Description of image">
+                <img src="02.png" class ="third_img" alt="Description of image">
+                <p>Be present at<br> Eid prayers 
+            </div>
+            <div class="container-4">
+                <img src="icon3.png"  alt="Description of image">
+                <img src="03.png" class ="fourth_img"alt="Description of image">
+                <p>Wait for the winner to be announced</p>
+
+            </div>
+        </div>
+
+        <div class="doublebutton">
+            <button class="btn-Join " onclick="openWhatsApp()">Join our WhatsApp group</button>
+            <button class="btn-Join " onclick="openGmailCompose()">⁠Join our mailing list</button>
+        </div>
+
+
+
+
+    </div>
+
+
+
+<!-- section 4 -->
+
+
+<div class="termof">
+    <h3 class="howworks">Terms & Conditions</h3>
+    <div class="mainiconbox">
+            <div class="iconbox">
+                <img src="Group.png" class ="check"alt="Description of image">
+                <p class="termpara">You must be present at Eid to claim the prize.</p>
+            </div>
+            <div class="iconbox">
+                <img src="Group.png" class ="check"alt="Description of image">
+                <p class="termpara">One entry per person.</p>
+
+            </div>
+            <div class="iconbox">
+                <img src="Group.png" class ="check"alt="Description of image">
+                <p class="termpara">You must have filled in the form.</p>
+
+            </div>
+            <div class="iconbox">
+                <img src="Group.png" class ="check"alt="Description of image">
+                <p class="termpara">Ensure you use the same number on the Ensure you use the same number on the form to sign up to the whatapp group</p>
+            </div>
+
+            <div class="iconbox">
+                <img src="Group.png" class ="check"alt="Description of image">
+                <p class="termpara">must be over 16</p>
+            </div>
+
+            <div class="iconbox">
+                <img src="Group.png" class ="check"alt="Description of image">
+                <p class="termpara">winner will be picked at random</p>
+            </div>
+
+            <!-- <div class="iconbox">
+                <img src="Group.png" class ="check"alt="Description of image">
+                <p class="termpara"><div class="iconbox">
+                    <img src="Group.png" class ="check"alt="Description of image">
+                    <p class="termpara">winner will be picked at random</p>
+                </div></p>
+            </div> -->
+
+        </div>
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+    
+
+
+
+<script>
+  function openCalendar() {
+    const modal = document.getElementById("calendarModal");
+    const calendar = document.getElementById("calendar");
+
+    // Clear previous calendar content
+    calendar.innerHTML = "";
+
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = today.getMonth();
+    const dateToday = today.getDate();
+
+    const monthNames = [
+      "January", "February", "March", "April", "May", "June",
+      "July", "August", "September", "October", "November", "December"
+    ];
+
+    const firstDay = new Date(year, month, 1).getDay();
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+    // Build header
+    let html = `<h2>${monthNames[month]} ${year}</h2>`;
+    html += "<table><tr>";
+    const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    days.forEach(day => {
+      html += `<th>${day}</th>`;
+    });
+    html += "</tr><tr>";
+
+    // Empty cells before first day of month
+    for (let i = 0; i < firstDay; i++) {
+      html += "<td></td>";
+    }
+
+    // Days of the month
+    for (let day = 1; day <= daysInMonth; day++) {
+      // Highlight today
+      if (day === dateToday) {
+        html += `<td><span class="today">${day}</span></td>`;
+      } else {
+        html += `<td>${day}</td>`;
+      }
+
+      // New row every 7 days
+      if ((firstDay + day) % 7 === 0) {
+        html += "</tr><tr>";
+      }
+    }
+
+    html += "</tr></table>";
+
+    calendar.innerHTML = html;
+    modal.style.display = "block";
+  }
+
+  function closeCalendar() {
+    document.getElementById("calendarModal").style.display = "none";
+  }
+
+  // Close modal when clicking outside the content
+  window.onclick = function(event) {
+    const modal = document.getElementById("calendarModal");
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+
+
+
+
+//   registration form
+
+
+const modal = document.getElementById('umrahModal');
+  const openBtn = document.getElementById('openFormBtn');
+  const closeBtn = document.getElementById('closeModalBtn');
+  const form = document.getElementById('umrahForm');
+
+  openBtn.addEventListener('click', () => {
+    modal.style.display = 'block';
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  // Close if clicked outside modal content
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const data = {
+      fullName: form.fullName.value,
+      email: form.email.value,
+      phone: form.phone.value,
+      departureDate: form.departureDate.value,
+      package: form.package.value,
+    };
+
+    alert(`Thank you for registering, ${data.fullName}!\nWe will contact you at ${data.email}.`);
+
+    form.reset();
+    modal.style.display = 'none';
+  });
+
+
+
+//   gmail embed
+
+    function openGmailCompose() {
+    const toEmail = 'aqsamazhar101@gmail.com';  // The email address you want to send to
+    const subject = encodeURIComponent('Your Subject Here');
+    const body = encodeURIComponent('Hello, this is the email body.');
+
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${toEmail}&su=${subject}&body=${body}`;
+
+    window.open(gmailUrl, '_blank'); // Opens Gmail compose in a new tab
+  }
+
+
+
+//   watsapp embed 
+
+function openWhatsApp() {
+    const phoneNumber = '923001234567'; // Replace with the full international number, no + or dashes
+    const whatsappUrl = `https://wa.me/${phoneNumber}`;
+    window.open(whatsappUrl, '_blank');
+  }
+
+
+
+//   donation  js
+
+
+   document.getElementById("donateBtn").addEventListener("click", function () {
+    document.getElementById("paymentModal").style.display = "block";
+  });
+
+  function closeModal() {
+    document.getElementById("paymentModal").style.display = "none";
+  }
+
+  window.onclick = function (event) {
+    const modal = document.getElementById("paymentModal");
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  };
+
+  function submitForm() {
+    const method = document.getElementById("method").value;
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const amount = document.getElementById("amount").value;
+    const date = document.getElementById("date").value;
+
+    if (!name || !phone || !amount || !date) {
+      alert("Please fill out all fields.");
+      return;
+    }
+
+    // You can replace this alert with sending data to a server
+    alert(`Thank you, ${name}!\nYour donation of Rs. ${amount} via ${method} has been recorded for ${date}.`);
+
+    closeModal();
+  }
+
+
+  // jquery 
+  // kaba img
+  $(document).ready(function() {
+    let fadeLoop;
+
+    $('#kabahImage').hover(
+        function() {
+            // Start loop on hover
+            fadeLoop = setInterval(function() {
+                $('#kabahImage').fadeOut(900).fadeIn(900);
+            }, 1000); // 500ms fadeOut + 500ms fadeIn = 1000ms total
+        },
+        function() {
+            // Stop loop when not hovering
+            clearInterval(fadeLoop);
+            $('#kabahImage').stop(true, true).fadeIn(0); // ensure image is visible
+        }
+    );
+});
+
+
+
+    $(document).ready(function() {
+        $("#kabahImage").animate({
+            right: "300px"
+        }, 1500); // 2000ms = 2 seconds
+    });
+
+
+// clipboard img
+$(document).ready(function() {
+    let fadeLoop;
+
+    $('.clipboardimg').hover(
+        function() {
+            // Start fade loop on hover
+            fadeLoop = setInterval(() => {
+                $(this).fadeOut(900).fadeIn(900);
+            }, 1000); // Total cycle time: 1 second
+        },
+        function() {
+            // Stop loop on mouse leave
+            clearInterval(fadeLoop);
+            $(this).stop(true, true).fadeIn(0); // Reset image to visible
+        }
+    );
+});
+
+
+$(document).ready(function() {
+    $(".clipboardimg").animate({
+        left: "350px"
+    }, 1000); // 2 seconds
+});
+
+
+
+// four container jquery
+$(document).ready(function() {
+    function fadeLoop() {
+        $('.container-1').fadeOut(1000).fadeIn(1000, fadeLoop);
+    }
+    fadeLoop(); // start the loop
+});
+
+$(document).ready(function() {
+    function fadeLoop() {
+        $('.container-2').fadeOut(1000).fadeIn(1000, fadeLoop);
+    }
+    fadeLoop(); // start the loop
+});
+
+$(document).ready(function() {
+    function fadeLoop() {
+        $('.container-3').fadeOut(1000).fadeIn(1000, fadeLoop);
+    }
+    fadeLoop(); // start the loop
+});
+
+
+$(document).ready(function() {
+    function fadeLoop() {
+        $('.container-3').fadeOut(1000).fadeIn(1000, fadeLoop);
+    }
+    fadeLoop(); // start the loop
+});
+
+$(document).ready(function() {
+    function fadeLoop() {
+        $('.container-4').fadeOut(1000).fadeIn(1000, fadeLoop);
+    }
+    fadeLoop(); // start the loop
+});
+
+
+
+</script>
+</body>
+</html>
+
