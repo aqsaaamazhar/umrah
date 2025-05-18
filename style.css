@@ -593,7 +593,7 @@ label {
     width: 680px;
     height: 335px;
     padding: 20px 0 0 20px;
-    margin-bottom: 300px;
+    margin-bottom: 360px;
     
   }
   .Umrah {
@@ -630,10 +630,10 @@ margin-top: 70px;
     flex-direction: column-reverse;
   }
   .Umrah-free{
-    font-size: 45px;    
+    font-size: 30px;    
   }
   .Why-This{
-    font-size: 25px;
+    font-size: 20px;
   }
   .freeumrah-section{
     width: 340px;
