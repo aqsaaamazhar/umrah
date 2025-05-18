@@ -12,6 +12,9 @@
     margin: 0 auto;
     margin-bottom: 40px;
 }
+.logo{
+  display: block;
+}
 
 nav ul {
     list-style: none;       /* Remove bullets */
@@ -601,6 +604,10 @@ label {
     /* position: relative;
     left: -300px;  */
   }
+  .clipboard{
+margin-top: 70px;
+  }
+
   .Free-Umrah {
     
     flex-direction: column-reverse;
@@ -611,7 +618,7 @@ label {
 
   }
   .freeumrah-section{
-    width: 325px;
+    width: 340px;
   }
   .four-container{
     display: flex;
@@ -620,7 +627,7 @@ label {
   }
 
   .Works{
-    margin-top: 309px;
+    /* margin-top: 309px; */
     height: 1297px;
   }
   .howworks{
@@ -633,6 +640,12 @@ label {
    justify-content: start;
  
   }
-  
+  .logo{
+    display: block;
+  }
+  .modal-content{
+    margin-left: 10px;
+    width: 300px;
+  }
 }
 
