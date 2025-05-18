@@ -12,9 +12,7 @@
     margin: 0 auto;
     margin-bottom: 40px;
 }
-nav{
-    /* width: 70%; */
-}
+
 nav ul {
     list-style: none;       /* Remove bullets */
     padding: 0;
@@ -38,6 +36,13 @@ nav ul {
   nav ul li a:hover {
     color: #30DAFF;
   }
+ 
+  .menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
   .btn{
     background-color: #0096B7;
     color: white;
@@ -198,10 +203,14 @@ border-radius: 20px;
   .Free-Umrah{
 
     display: flex;
+    flex-direction: row;
     line-height: 18px;
     height: 400px;
     width:1140px;
     margin: 70px auto 0 auto;
+}
+.clipboard{
+  order: 1;
 }
  
  
@@ -214,6 +223,7 @@ border-radius: 20px;
   }
   .freeumrah-section {
     padding: 20px;
+    order: 2;
   }
   .Why-This{
 color:#0096B7;
@@ -529,3 +539,100 @@ label {
     border: none;
     border-radius: 12px;
     }
+ 
+
+
+@media (max-width: 375px) {
+  .menu-toggle {
+    display: block;
+    position: absolute; 
+    top: 20px; 
+    right: 20px;
+    color: black;
+  }
+  
+  
+  .nav-links {
+    color: #f2f2f2;
+     display: none; /* Hide by default */
+    flex-direction: column;
+    margin-top: 10px;
+    width: 100%;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    color: #ddd;
+     background-color: #0096B7;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .banner{
+    width: 680px;
+    height: 335px;
+    padding: 20px 0 0 20px;
+    margin-bottom: 300px;
+  }
+  .Umrah {
+    font-size: 50px;
+  }
+  .left-banner {
+    width: 35%;
+}
+
+  #kabahImage {
+  position: absolute;
+    left:228px;
+    height:324px;
+    width: 250px;
+}
+.Rectangleimg{
+  
+  width: 350px;
+  height: 300px;
+}
+.clipboardimg{ 
+  margin-left: -308px;
+
+    height: 330px;
+    /* position: relative;
+    left: -300px;  */
+  }
+  .Free-Umrah {
+    
+    flex-direction: column-reverse;
+  }
+  .Umrah-free{
+    font-size: 50px;
+       
+
+  }
+  .freeumrah-section{
+    width: 325px;
+  }
+  .four-container{
+    display: flex;
+  flex-direction: column;
+  gap: 20px;
+  }
+
+  .Works{
+    margin-top: 309px;
+    height: 1297px;
+  }
+  .howworks{
+    font-size: 25px;
+  }
+  .mainiconbox{
+    width: 100%;
+  }
+  .iconbox{
+   justify-content: start;
+ 
+  }
+  
+}
+

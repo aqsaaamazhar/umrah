@@ -12,17 +12,19 @@
 
         <div class="header">
             <img src="logo.png" alt="Description of image">
-            <nav>
-                <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Madarasa</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Zakat</a></li>
-                <li><a href="#">Donate</a></li>
-                <li><a href="#">Funding</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">About Us</a></li>
+            <!-- <input type="checkbox" id="menu-toggle" /> -->
+            <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+          <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Madarasa</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Zakat</a></li>
+                    <li><a href="#">Donate</a></li>
+                    <li><a href="#">Funding</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About Us</a></li>
                 </ul>
             </nav>
             <button class="btn" id="donateBtn">Donate Now</button>
@@ -114,7 +116,7 @@
 <!-- section 2 -->
         <div class ="Free-Umrah">
             <div class ="clipboard">
-                <img src="Rectangle.png" alt="Description of image">
+                <img src="Rectangle.png" class="Rectangleimg" alt="Description of image">
 
                 <img src="clipboard.png" class="clipboardimg" alt="Description of image">
 
@@ -224,6 +226,7 @@
 <!-- section 4 -->
 
 
+
 <div class="termof">
     <h3 class="howworks">Terms & Conditions</h3>
     <div class="mainiconbox">
@@ -280,6 +283,7 @@
 
 
 
+
 <script>
   function openCalendar() {
     const modal = document.getElementById("calendarModal");
@@ -316,7 +320,7 @@
     }
 
     // Days of the month
-    for (let day = 1; day <= daysInMonth; day++) {
+    for (let  day= 1; day <= daysInMonth; day++) {
       // Highlight today
       if (day === dateToday) {
         html += `<td><span class="today">${day}</span></td>`;
@@ -546,6 +550,15 @@ $(document).ready(function() {
         $('.container-4').fadeOut(1000).fadeIn(1000, fadeLoop);
     }
     fadeLoop(); // start the loop
+});
+
+
+// toggle button code
+const toggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
+
+toggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
 });
 
 
