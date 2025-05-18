@@ -5,9 +5,12 @@
 }
 .header{
     display: flex;
-    justify-content: flex-end; 
+    /* justify-content: flex-end;  */
     align-items: center;
-    width:1140px;
+    width: 100%;
+  max-width: 1140px;
+  margin: 0 auto; /* Center it */
+  padding: 0 15px; 
     
     margin: 0 auto;
     margin-bottom: 40px;
@@ -64,9 +67,9 @@ nav ul {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 15px;
     width:1140px;
-   
-    
-    margin: 0 auto;
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto; /* Center it */
   }
   .Win{
     font-size: 28px;
@@ -553,8 +556,13 @@ label {
     right: 20px;
     color: black;
   }
-  
-  
+  .header {
+    width: 100%;
+    padding: 0 15px;
+  }
+  .btn{
+    display: none;
+  }
   .nav-links {
     color: #f2f2f2;
      display: none; /* Hide by default */
@@ -566,18 +574,27 @@ label {
     top: 60px;
     left: 0;
     color: #ddd;
-     background-color: #0096B7;
+     /* background-color: #0096B7; */
+      background: linear-gradient(135deg, #0096B7, #004251);
   }
-
+.nav-links li a:hover,
+.nav-links li a:active {
+  background-color: #ffffff;
+  color: #000000;
+}
   .nav-links.active {
     display: flex;
+    text-align: center;
+    margin-top: 90px;
   }
+
 
   .banner{
     width: 680px;
     height: 335px;
     padding: 20px 0 0 20px;
     margin-bottom: 300px;
+    
   }
   .Umrah {
     font-size: 50px;
@@ -613,9 +630,10 @@ margin-top: 70px;
     flex-direction: column-reverse;
   }
   .Umrah-free{
-    font-size: 50px;
-       
-
+    font-size: 45px;    
+  }
+  .Why-This{
+    font-size: 25px;
   }
   .freeumrah-section{
     width: 340px;
